@@ -1,0 +1,6 @@
+function L2 = Lambda2(k1, k2, sigma01, sigma02, g, h, Om);
+
+G2 = Gamma2(k1, k2, sigma01, sigma02, g, h, Om);
+L2 = G2*((k1+k2)*sinh((k1+k2)*h))/(sigma01+sigma02)...
+    +((k1+k2)*(Om+sigma01*coth(k1*h)+sigma02*coth(k2*h)))...
+    /(2*(sigma01+sigma02));
